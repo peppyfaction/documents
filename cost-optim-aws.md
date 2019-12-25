@@ -52,7 +52,7 @@ and around \$1000 on EC2 services.
     - Two lambda function , one for starting RDS instances and another for
     stopping them.
 
-
+**Architecture of Autostart/stop infra**
 <img src="images/PF_AutorestartRdsSetup.png" width="700" length="500"/>
 
 #### **Elastic Compute:**
