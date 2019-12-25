@@ -2,11 +2,11 @@
 layout: page
 
 ---
-Cost Optimisation for AWS Operations
+# Cost Optimisation for AWS Operations
 
  
 
-Goal achieved:
+## Goal achieved:
 --------------
 
 In recent engagement we got an opportunity to work with a client to
@@ -14,27 +14,22 @@ reduce their AWS operations cost of RDS and elastic compute by \$3000
 per month.
 
  
-
 Before our engagement their monthly expenditure was around \$4000 on RDS
 and around \$1000 on EC2 services.
 
- 
 
- 
 
- 
-
-Client's infrastructure before we get in to engagement:
+## Client's infrastructure before we get in to engagement:
 -------------------------------------------------------
 
-#### **RDS:******
+#### **RDS:**
 
 -   Five database were running where four were Oracle and one was SQL.
 -   Oracle and SQL instance were of size db.m4.xlarge and db.m5.xlarge.
 -   Current setup was running on demand which cost approx. 0.823\$ per
     hour per db.m5.xlarge instance.
 
-#### **Elastic Compute:******
+#### **Elastic Compute:**
 
 -   Three instances were running with r5.xlarge configuration.
 -   These instances were associated with auto scaling group, hence in
@@ -42,10 +37,9 @@ Client's infrastructure before we get in to engagement:
 
  
 
-With our expertise, we consulted and worked on to : 
+## With our expertise, we consulted and worked on to : 
 ----------------------------------------------------
 
- 
 
 #### **RDS:**
 
@@ -72,12 +66,9 @@ Stop RDS instances during off-business hours. We achieved it using:
 
  
 
- 
-
-**Elastic Compute:******
+**Elastic Compute:**
 ------------------------
 
- 
 
 -   We studied application resources and reduced instance size using
     Prometheus ([https://prometheus.io/](https://prometheus.io/)).
