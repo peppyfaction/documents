@@ -10,5 +10,4 @@ We are executing cloudwatch event in the interval of a day which mapped to the l
 
 In order to focus on dynamic resource management via trophoshere , please find the below script and it's description.
 
-! [embedded code]
-(https://gist.github.com/peppyfaction/778bd4fd622dcb730d70a82b8f443e2e)
+![embedded code](https://gist.github.com/peppyfaction/778bd4fd622dcb730d70a82b8f443e2e)
