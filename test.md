@@ -1,6 +1,8 @@
 ---
 layout: page
-title:  "Test Document"
+title:  "Learning Resources"
+categories: kubernetes
+permalink: /documents/learning.html
 ---
 
 # Test Document
