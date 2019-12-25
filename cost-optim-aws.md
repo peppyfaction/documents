@@ -53,7 +53,7 @@ and around \$1000 on EC2 services.
     stopping them.
 
 
-<img src="images/PF_AutorestartRdsSetup.png" alt="Architecture of Autostart/stop infra" width="700" length="500"/>
+<img src="images/PF_AutorestartRdsSetup.png" width="700" length="500"/>
 
 #### **Elastic Compute:**
 
