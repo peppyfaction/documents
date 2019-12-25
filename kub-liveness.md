@@ -147,6 +147,7 @@ healthCheck:
 ### Step 3: Deploy Application using the image build & pushed in step#1 and values.yaml health-check section inclusion (step#2)
 
 
-References:
+References: <br />
 https://cloud.google.com/blog/products/gcp/kubernetes-best-practices-setting-up-health-checks-with-readiness-and-liveness-probes
+<br />
 https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
