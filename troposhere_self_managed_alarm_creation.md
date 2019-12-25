@@ -21,6 +21,7 @@ def alarm_creation(event, context):
     lambda_client = boto3.client('lambda')
     paginator = lambda_client.get_paginator('list_functions')
     response_iterator = paginator.paginate()
+    ```
     t = Template()
     count = 0
     t.add_description("Dynamic lambda metrics enabled")
