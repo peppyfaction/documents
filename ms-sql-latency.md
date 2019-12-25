@@ -1,3 +1,6 @@
+---
+layout: page
+---
 # High latency in MSSQL DB hosted on Nutanix after Nutanix cluster upgrade
 
  
