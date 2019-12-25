@@ -63,7 +63,7 @@ Stop RDS instances during off-business hours. We achieved it using:
 -  Two lambda function , one for starting RDS instances and another for
     stopping them.
 
- 
+ ![Architecture of Autostart/stop infra](https://github.com/peppyfaction/documents/blob/master/images/PF_AutorestartRdsSetup.png)
 
 **Elastic Compute:**
 ------------------------
