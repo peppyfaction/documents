@@ -9,8 +9,8 @@ In order to create alerts for all these resources, we have created a custom solu
 We are executing cloudwatch event in the interval of a day which mapped to the lambda function. The lambda function has 3.6 python runtime environment and trophoshere script to create/delete lambda/api gateway/dynamodb alerts based on selected metrics.
 
 In order to focus on dynamic resource management via trophoshere , please find the below script and it's description.
-
-``import sys
+```
+import sys
 import json
 from troposphere import Parameter, Ref, Template, Sub
 from troposphere.cloudwatch import Alarm, MetricDimension
@@ -21,7 +21,6 @@ def alarm_creation(event, context):
     lambda_client = boto3.client('lambda')
     paginator = lambda_client.get_paginator('list_functions')
     response_iterator = paginator.paginate()
-    ```
     t = Template()
     count = 0
     t.add_description("Dynamic lambda metrics enabled")
