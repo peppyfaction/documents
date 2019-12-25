@@ -57,12 +57,10 @@ considering minimum running instances at time.
 
 Stop RDS instances during off-business hours. We achieved it using:
 
--   CloudWatch Event rules which will execute on every morning 8:00 am
+-  CloudWatch Event rules which will execute on every morning 8:00 am
     EST and evening 7:30 pm EST.
--   Two lambda function , one for starting RDS instances and another for
+-  Two lambda function , one for starting RDS instances and another for
     stopping them.
-
-\
 
  
 
