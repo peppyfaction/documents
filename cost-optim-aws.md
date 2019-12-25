@@ -19,7 +19,7 @@ and around \$1000 on EC2 services.
 
 
 
-## <span style="color:blue">Client's infrastructure before we get in to engagement:</span>
+### <span style="color:blue">Client's infrastructure before we get in to engagement:</span>
 -------------------------------------------------------
 
 #### **RDS:**
@@ -38,7 +38,7 @@ and around \$1000 on EC2 services.
  
 
 
-##<span style="color:blue">With our expertise, we consulted and worked on to :</span>
+### <span style="color:blue">With our expertise, we consulted and worked on to :</span>
 ----------------------------------------------------
 
 
