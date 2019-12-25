@@ -10,9 +10,7 @@ We are executing cloudwatch event in the interval of a day which mapped to the l
 
 In order to focus on dynamic resource management via trophoshere , please find the below script and it's description.
 
-![embedded code]: (https://gist.github.com/peppyfaction/778bd4fd622dcb730d70a82b8f443e2e)
-'''
-import sys
+``import sys
 import json
 from troposphere import Parameter, Ref, Template, Sub
 from troposphere.cloudwatch import Alarm, MetricDimension
@@ -23,6 +21,7 @@ def alarm_creation(event, context):
     lambda_client = boto3.client('lambda')
     paginator = lambda_client.get_paginator('list_functions')
     response_iterator = paginator.paginate()
+
     t = Template()
     count = 0
     t.add_description("Dynamic lambda metrics enabled")
@@ -78,4 +77,4 @@ def alarm_creation(event, context):
             StackName='lambda-alarm-creation-devops',
             TemplateBody = template
         )
-'''
+        ```
