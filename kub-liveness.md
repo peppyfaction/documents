@@ -15,10 +15,10 @@ One can define health-check to be performed depending on the requirement. Health
 In our case, we wanted to check if:
 
 
-Application service are up by performing curl operation inside the container on given URL/Port. If HTTP response code does not match with the expected user defined code, liveness check is treated as failed. 
+* Application service are up by performing curl operation inside the container on given URL/Port. If HTTP response code does not match with the expected user defined code, liveness check is treated as failed. 
 
 
-Mounted persistent storage volume is in healthy state by performing a write operation on the mounted PVC. If write operations fails, liveness check is treated as failed.
+* Mounted persistent storage volume is in healthy state by performing a write operation on the mounted PVC. If write operations fails, liveness check is treated as failed.
 
 
 In case liveness check fails, container gets restarted.
@@ -27,7 +27,7 @@ In case liveness check fails, container gets restarted.
 Let's have a look on what needs to be done to achieve this.
 
 
-Step 1: Build your docker image with liveness script in place
+### Step 1: Build your docker image with liveness script in place
 
 
 Build your application docker image using  the sample liveness  script  provided .The script will be copied to  the container image and will be present in /tmp directory inside pod. 
@@ -107,10 +107,10 @@ timeout 10 rm -f $TMP_FILE
 exit $EXT_CODE
 ```
 
-The  variables MOUNT_PATH, URL_CHECK and RESP_CODE defined in the liveness script will vary from application to application and should be changed  before building the image (copying script inside the image)
+The  variables **MOUNT_PATH**, **URL_CHECK** and **RESP_CODE** defined in the liveness script will vary from application to application and should be changed  before building the image (copying script inside the image)
 
 
-MOUNT_PATH variable should be exactly the same as defined in the values.yaml file.
+**MOUNT_PATH** variable should be exactly the same as defined in the values.yaml file.
 
 
 For e.g - let’s assume following configuration has been defined in your values.yaml for persistence storage 
@@ -125,15 +125,15 @@ config:
       accessMode: "ReadWriteMany" 
 ```  
     
-In this case MOUNT_PATH variable should  be set to \“/data/test\”
+In this case **MOUNT_PATH** variable should  be set to \“/data/test\”
 
 Let’s assume your application listens on port 8080 and returns code 200 for successful curl request then, 
 
 
-URL_CHECK variable needs to be set to “localhost:8080” RESP_CODE variable needs to be set to 200
+**URL_CHECK** variable needs to be set to “localhost:8080” RESP_CODE variable needs to be set to 200
 
 
-Step 2: Modify values.yaml to execute liveness check
+### Step 2: Modify values.yaml to execute liveness check
 
 Include following section to enable  health-check/liveness check
 ```
@@ -144,9 +144,9 @@ healthCheck:
   timeoutSeconds: 25
 ```
 
-Step 3: Deploy Application using the image build & pushed in step#1 and values.yaml health-check section inclusion (step#2)
+### Step 3: Deploy Application using the image build & pushed in step#1 and values.yaml health-check section inclusion (step#2)
 
 
-References:j
+References:
 https://cloud.google.com/blog/products/gcp/kubernetes-best-practices-setting-up-health-checks-with-readiness-and-liveness-probes
 https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
