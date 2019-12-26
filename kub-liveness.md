@@ -39,7 +39,7 @@ Note : Liveness Script makes use of curl - so please make sure image is build wi
 Sample Docker file: Assuming liveness script name is liveness.sh
 
 ```
-FROM registry.mckinsey.com/gold-images/nginx:1.10.3
+FROM nginx
 RUN  apt-get  update
 RUN  apt-get  install -y curl 
 COPY liveness.sh /tmp/
