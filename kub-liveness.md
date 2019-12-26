@@ -3,22 +3,15 @@ layout: page
 ---
 # Liveness in Kubernetes using Helm
 
-In recent engagement with a client, we implemented concept of liveness health-check to check if application services are up. In case a service is down pplication is not up, application pod gets restarted.
+In recent engagement with a client, we implemented concept of liveness health-check to check if application services are up. In case liveness check fails, application pod gets restarted.
 
-
-Here is brief summary of overall logic one can used to achieve the same. Idea is to execute a script (shell/python etc.) on a regular interval of time to check health of a container. Script can return 0 or 1. If 1 is returned liveness is treated to be failed and container gets restarted.
-
+Here is brief summary of overall logic one can used to achieve the same. Idea is to execute a script (shell/python etc.) on a regular interval of time to check health of a pod. Script can return 0 or 1. If 1 is returned from this script, liveness is treated to be failed and pod gets restarted.
 
 One can define health-check to be performed depending on the requirement. Health-check can be simply to verify a service e.g. DB service availability before bringing the application container up.
 
-
 In our case, we wanted to check if:
 
-
-* Application service are up by performing curl operation inside the container on given URL/Port. If HTTP response code does not match with the expected user defined code, liveness check is treated as failed. 
-
-
-In case liveness check fails, app pod gets restarted.
+* Application service are up by performing curl operation inside the container on given URL/Port. If HTTP response code does not match with the expected user defined code, liveness check is treated as failed which triggers restart of the pod.
 
 
 Let's have a look on what needs to be done to achieve this.
