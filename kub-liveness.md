@@ -1,9 +1,9 @@
 ---
 layout: page
 ---
-# Liveness in Kubernetes using Helm
+# Liveness in Kubernetes
 
-In recent engagement with a client, we implemented concept of liveness health-check to check if application services are up. In case liveness check fails, application pod gets restarted.
+In our recent engagement with a client, we implemented concept of liveness probe to check if application services are up. In case liveness probe fails, application pod gets restarted.
 
 Here is brief summary of overall logic one can used to achieve the same. Idea is to execute a script (shell/python etc.) on a regular interval of time to check health of a pod. Script can return 0 or 1. If 1 is returned from this script, liveness is treated to be failed and pod gets restarted.
 
