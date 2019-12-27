@@ -24,7 +24,7 @@ longer than 15 seconds to complete on file .*
 *The OS file handle is 0x000006A4. The offset of the latest long I/O is:
 0x00000*
 
-![](latency%20in%20SQL.fld/image001.png)
+<img src="images/highiopserror.png" width="700" length="500"/>
 
 ### Client Infrastructure
 -------------------------------------------------------
@@ -79,4 +79,4 @@ VLAN so that traffic must remain and leverage 10G Nutanix Cluster
 network. As iscsi network started running on 10 G, latency reduced to 2
 ms dramatically.
 
-![](latency%20in%20SQL.fld/image002.png)
+<img src="images/sqlnormaliops.png" width="700" length="500"/>
