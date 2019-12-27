@@ -79,4 +79,4 @@ VLAN so that traffic must remain and leverage 10G Nutanix Cluster
 network. As iscsi network started running on 10 G, latency reduced to 2
 ms dramatically.
 
-<img src="images/sqlnormaliops.png" width="700" length="500"/>
+<img src="images/sqlnormaliops.png" width="600" length="400"/>
